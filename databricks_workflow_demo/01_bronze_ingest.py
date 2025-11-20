@@ -20,7 +20,7 @@ print(f"Esquemas: {BRONZE_SCHEMA}, {SILVER_SCHEMA}, {GOLD_SCHEMA}")
 # 01_bronze_ingest.py
 
 # Cargar configuración común
-%run ./00_config
+# %run ./00_config
 
 from pyspark.sql.functions import expr
 
