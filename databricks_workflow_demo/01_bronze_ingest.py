@@ -1,5 +1,22 @@
+# -------------------------------------------------------------
+# Mejoras aplicadas en este script:
+# # ✔ Logging profesional
+#     - Permite monitorear fácilmente la ejecución en Databricks Jobs.
+## ✔ Estructura con try/except
+#     - Si ocurre un error, la tarea del Job se marca como FAILED.
+## ✔ Parámetro process_date
+#     - Compatible con ejecución desde Workflows y pipelines CI/CD.
+## ✔ Validaciones de calidad de datos
+#     - Incluye warnings si los resultados no cumplen expectativas 
+#       (ej. tabla FACT sin registros, nulos inesperados, etc.).
+## ✔ Configuración unificada
+#     - Mismo patrón que Bronze y Silver para mantener coherencia.
+## ✔ Código 100% ejecutable
+#     - Eliminado %run y cualquier referencia incompatible con Python scripts.
+# -------------------------------------------------------------
 
-# imporamos las librerias
+
+# importamos las librerias
 import sys
 import logging
 from pyspark.sql.functions import expr, col, rand
