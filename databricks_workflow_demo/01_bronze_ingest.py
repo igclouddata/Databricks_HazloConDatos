@@ -32,7 +32,7 @@ logger.info(f"Iniciando tarea BRONZE para fecha: {process_date}")
 
 # -----------------------------------------
 # Cargar configuración común
-# (IMPORTANTE: importar, no usar %run)
+# (IMPORTANTE: importar, no usar %run) Posterior se puede separar en otro py
 # -----------------------------------------
 
 CATALOG = "project_databricks_hcd"  # cámbialo si es otro
