@@ -64,7 +64,7 @@ def main():
         # ------------------------
         # Clientes (Bronze)
         # ------------------------
-        
+
         customers_bronze_df = (
             spark.range(1, 101)  # 100 clientes
                 .withColumn("customer_fname", expr("concat('Nombre_', id)"))
@@ -75,7 +75,7 @@ def main():
                 .withColumn("customer_zipcode", expr("lpad(cast(id as string), 5, '0')"))
         )
 
-       customers_bronze_table = f"{CATALOG}.{BRONZE_SCHEMA}.customers"
+        customers_bronze_table = f"{CATALOG}.{BRONZE_SCHEMA}.customers"
         customers_bronze_df.write.format("delta").mode("overwrite").saveAsTable(customers_bronze_table)
         logger.info("Tabla Bronze creada: %s", customers_bronze_table)
 
