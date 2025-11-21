@@ -1,8 +1,8 @@
 
 # imporamos las librerias
-import logging
 import sys
-import pyspark.sql.functions expr,col,rand
+import logging
+from pyspark.sql.functions import expr, col, rand
 
 # -----------------------------------------
 # Logging profesional
